@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumièreLuxe</title>
+    <link rel="stylesheet" href="check.css">
+    <link rel="stylesheet" href="bootstrap-icons-1.8.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <!-- Thư viện Bootstrap JS và Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js" 
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+        }
+
+        section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        aside {
+            width: 15%;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            max-height: 3000px; 
+            overflow-y: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .mega-menu {
+        position: static;
+        }
+
+        .mega-menu-content {
+        padding: 20px;
+        width: 100%;
+        background-color: #fff; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .mega-menu-content ul {
+        list-style: none;
+        padding: 0;
+        }
+
+        .mega-menu-content ul li {
+        margin-bottom: 10px;
+        }
+
+
+        .mega-item {
+        color: #063527;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+        }
+
+        .mega-item:hover {
+        color: #ff6600;
+        }
+
+
+        .mega-menu-content h4 {
+        color: #ff6600; }
+
+
+        .mega-menu-content {
+        background-color: #f8f9fa; 
+        border: 1px solid #dee2e6; 
+        border-radius: 5px;
+        }
+
+
+        .navbar-nav li:hover .mega-menu-content {
+        display: block;
+        }
+
+
+        .navbar-nav > li > a {
+        padding: 10px 15px;
+        }
+
+        .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        }
+
+
+        .navbar-nav .dropdown .dropdown-menu {
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        }
+
+
+        .navbar-nav .dropdown .dropdown-menu .dropdown-item {
+        color: #063527;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-nav .dropdown .dropdown-menu .dropdown-item:hover {
+        color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="main">    
+            <div class="search">
+                <div class="header__logo">
+                    <a href="home.html">
+                    <img src="https://scontent.fhan7-1.fna.fbcdn.net/v/t39.30808-6/401477461_1821822794912153_6436708000331055777_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=uSyPPyOez8EAX89zQvx&_nc_ht=scontent.fhan7-1.fna&oh=00_AfB3cj0QJARuhTVUqxwWohTuKwAtJUE-m-y8Imv_4NPxDQ&oe=65559964" alt="logo">
+                    </a>
+                </div>
+                <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+                <div class="header__search">
+                    <h2 style="text-align: left;">LUMIÈRELUXE - ILLUMINATING ELEGANCE</h2>
+                </div>              
+      
+                <nav class="header__icon">
+                    <ul class="header__list">
+                        <li class="header__items"><a href="modal.html">Đăng nhập/Đăng kí</a></li>
+                        <li class="header__items"><a href="gio_hang.html">Giỏ hàng</a></li>
+                        <li class="header__items"><a href="yeu_thich.html">Yêu thích</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>
+        
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html">LumièreLuxe</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Danh mục sản phẩm
+                    </a>
+                    <div class="dropdown-menu mega-menu-content">
+                        <div class="row">
+                        <div class="col-md-3">
+                            <h4>ĐÈN ỐP TRẦN</h4>
+                            <ul class="list-unstyled">
+                            <li><a class="mega-item" href="#">Đèn ốp trần gỗ</a></li>
+                            <li><a class="mega-item" href="#">Đèn ốp trần pha lê</a></li>
+                            <li><a class="mega-item" href="#">Đèn ốp trần đồng</a></li>
+                            <li><a class="mega-item" href="#">Đèn ốp trần LED Hàn Quốc</a></li>
+                            <li><a class="mega-item" href="#">Đèn ốp trần Philips</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>ĐÈN CHÙM</h4>
+                            <ul class="list-unstyled">
+                            <li><a class="mega-item" href="#">Đèn chùm kiểu Ý</a></li>
+                            <li><a class="mega-item" href="#">Đèn chùm hiện đại</a></li>
+                            <li><a class="mega-item" href="#">Đèn chùm pha lê nến</a></li>
+                            <li><a class="mega-item" href="#">Đèn chùm thủy tinh</a></li>
+                            <li><a class="mega-item" href="#">Đèn chùm cổ điển</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>ĐÈN TƯỜNG</h4>
+                            <ul class="list-unstyled">
+                            <li><a class="mega-item" href="#">Đèn tường nghệ thuật</a></li>
+                            <li><a class="mega-item" href="#">Đèn tường hiện đại</a></li>
+                            <li><a class="mega-item" href="#">Đèn tường cổ điển</a></li>
+                            <li><a class="mega-item" href="#">Đèn tường chao đá</a></li>
+                            <li><a class="mega-item" href="#">Đèn tường đồng</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>ĐÈN THẢ</h4>
+                            <ul class="list-unstyled">
+                            <li><a class="mega-item" href="#">Đèn thả thủy tinh</a></li>
+                            <li><a class="mega-item" href="#">Đèn thả tân gỗ, sứ</a></li>
+                            <li><a class="mega-item" href="#">Đèn thả chảo đá</a></li>
+                            <li><a class="mega-item" href="#">Đèn thả bàn ăn</a></li>
+                            <li><a class="mega-item" href="#">Đèn thả nghệ thuật</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>ĐÈN NGOẠI THẤT</h4>
+                            <ul class="list-unstyled">
+                            <li><a class="mega-item" href="#">Đèn đồng ngoài trời</a></li>
+                            <li><a class="mega-item" href="#">Đèn thả ngoài trời</a></li>
+                            <li><a class="mega-item" href="#">Đèn trụ cổng, trụ tường</a></li>
+                            <li><a class="mega-item" href="#">Đèn tường ngoài trời</a></li>
+                            <li><a class="mega-item" href="#">Đèn bãi rọi cỏ cây</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>ĐÈN DOWNLIGHT</h4>
+                            <ul class="list-unstyled">
+                            <li><a class="mega-item" href="#">Đèn Downlight Bóng rời</a></li>
+                            <li><a class="mega-item" href="#">Đèn Downlight LED âm</a></li>
+                            <li><a class="mega-item" href="#">Đèn Downlight Philips</a></li>
+                            <li><a class="mega-item" href="#">Đèn Downlight Châu Âu</a></li>
+                            <li><a class="mega-item" href="#">Đèn Downlight LED nổi</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>ĐÈN CHUYÊN DỤNG</h4>
+                            <ul class="list-unstyled">
+                            <li><a class="mega-item" href="#">Đèn pha, pha LED</a></li>
+                            <li><a class="mega-item" href="#">Đèn pha dưới nước</a></li>
+                            <li><a class="mega-item" href="#">Đèn pha ray LED</a></li>
+                            <li><a class="mega-item" href="#">Đèn pin LED</a></li>
+                            <li><a class="mega-item" href="#">Đèn âm tường, âm sàn</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    </li>
+                    
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Dự án</a>
+                    </li>
+        
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dịch vụ
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Giao hàng</a></li>
+                        <li><a class="dropdown-item" href="#">Lắp đặt</a></li>
+                        <li><a class="dropdown-item" href="#">Sửa chữa</a></li>       
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Liên hệ</a>
+                    </li>        
+                </ul>
+                <form class="d-flex" role="search" id="searchForm">
+                    <input class="form-control me-2" type="search" id="searchInput" placeholder="Nhập sản phẩm" aria-label="Tìm kiếm">
+                    <div id="suggestions"></div>
+                    <button class="btn btn-outline-success" type="submit">Tìm</button>
+                </form>
+                <script src="script.js"></script>
+                
+                </div>
+            </div>
+        </nav>
+
+            <!--banner mới-->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://scontent.fhan7-1.fna.fbcdn.net/v/t39.30808-6/400663935_1821823088245457_2746979954270032264_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VQs6gXjJqPUAX8vAn1s&_nc_ht=scontent.fhan7-1.fna&oh=00_AfB70jFZNmVp9JJAr4Mx4QA6Zmoxr3tpJZzT1GyujhEwTQ&oe=6556AE95" class="d-block w-100" alt="..." height="500px">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fhan9-1.fna.fbcdn.net/v/t39.30808-6/400676286_1822732078154558_7464127024227006610_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Gt7KTKLH6hAAX-pBq5q&_nc_ht=scontent.fhan9-1.fna&oh=00_AfDng94c3lFieoz5Mm4tAK1t8cD3FC84GHMRdQcr7QidMA&oe=65583F11" class="d-block w-100" alt="..." height="500px">
+                </div>                
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+    <!--Tin tức-->
+          <aside>
+            <h2 style="color:rgb(191, 152, 80); font-size: 25px;">Tin tức nổi bật</h2>
+            <div class="news-item">
+                <img src="https://denchauau.vn/media/product/den-chum-nen-1.jpg" height="150" width="150" alt="News 1" title="ĐÈN CHÙM HIỆN ĐẠI TRONG TRANG TRÍ NHÀ CỬA">
+                <p style="font-size: 14px; "><a href="#">ĐÈN CHÙM HIỆN ĐẠI TRONG TRANG TRÍ NHÀ CỬA</a></p>
+                <div class="product-price">Ngày nay, đèn trang trí nói chung và đèn chùm nói riêng luôn là một phần không thể thiếu trong mỗi căn nhà. Đèn chùm hiện đại đang là xu hướng lựa chọn của các gia đình trẻ. Các hãng sản xuất đèn…</div>
+                <br>
+            </div>
+            <div class="news-item">
+                <img src="https://denchauau.vn/media/product/den-tha-nghe-thuat-th886.jpg" height="150" width="150" alt="News Image 2" title="NHỮNG XU HƯỚNG MỚI TRONG LỰA CHỌN ĐÈN TRANG TRÍ">
+                <p style="font-size: 14px;"><a href="#">NHỮNG XU HƯỚNG MỚI TRONG LỰA CHỌN ĐÈN TRANG TRÍ</a></p>
+                <div class="product-price">Hướng dẫn chọn đèn trang trí cho căn nhà của bạn Trong trang trí nội thất, đèn trang trí có vai trò vô cùng quan trọng giúp tô điểm thêm cho căn nhà. Bên cạnh những ánh sáng tự nhiên, ánh sáng …</div>
+            </div>
+            <div class="news-item">
+              <img src="https://decordi.vn/wp-content/uploads/2021/08/den-am-tran.jpg" height="150" width="150" alt="News Image 2" title="5 NGUYÊN TẮC LỰA CHỌN ĐÈN TRANG TRÍ">
+              <p style="font-size: 14px;"><a href="#">5 NGUYÊN TẮC LỰA CHỌN ĐÈN TRANG TRÍ</a></p>
+              <div class="product-price">Hiện nay trên thị trường đèn trang trí sản phẩm rất đa dạng và phong phú tuy nhiên để lựa chọn được đèn trang trí phù hợp công năng cũng như phong thủy của ngôi nhà. LumièreLuxe sẽ giúp bạn …</div>
+          </div>
+          <div class="news-item">
+            <img src="https://static1.cafeland.vn/cafelandnew/hinh-anh/2020/08/11/159/image-20200811145936-2.jpeg" height="150" width="150" alt="News Image 2" title="CÁCH CHỌN ĐÈN TRANG TRÍ CHO BIỆT THỰ, NHÀ PHỐ">
+            <p style="font-size: 14px;"><a href="#">CÁCH CHỌN ĐÈN TRANG TRÍ CHO BIỆT THỰ, NHÀ PHỐ</a></p>
+            <div class="product-price">Cách chọn đèn trang trí cho biệt trự độc đáo, sang trọng, đẳng cấp. Hy vọng với cách chọn đèn trang trí cho biệt thự dưới đây của LumièreLuxe sẽ giúp bạn tô điểm không gian ngôi nhà thân yêu.</div>
+        </div>
+        <div class="news-item">
+          <img src="https://noithatphalechauau.com.vn/data/upload/cach-chon-den-trang-tri-cho-biet-thu-sang-trong-h2.jpg" height="150" width="150" alt="News Image 2" title="ĐÈN DOWNLIGHT, ĐÈN LED MẮT TRÂU - NHỮNG ĐIỀU CẦN BIẾT">
+          <p style="font-size: 14px;"><a href="#">ĐÈN DOWNLIGHT, ĐÈN LED MẮT TRÂU - NHỮNG ĐIỀU CẦN BIẾT</a></p>
+          <div class="product-price">Đèn LED mắt trâu chính là loại đèn âm trần hay một số người còn gọi là đèn LED downlight, đèn LED mắt ếch. Đèn LED mắt trâu được gắn trực tiếp vào trần giả như thạch cao ho…</div>
+      </div>
+      <div class="news-item">
+        <img src="https://denchauau.vn/images/feature-den-san-vuon.jpg" height="150" width="150" alt="News Image 2" title="CÁCH CHỌN ĐÈN TRANG TRÍ SÂN VƯỜN CHO KHÔNG GIAN PHÙ HỢP">
+        <p style="font-size: 14px;"><a href="#">CÁCH CHỌN ĐÈN TRANG TRÍ SÂN VƯỜN CHO KHÔNG GIAN PHÙ HỢP</a></p>
+        <div class="product-price">Cách chọn đèn trang trí sân vườn còn phụ thuộc vào diện tích cũng như thiết kế của sân vườn mà có cách bố trí đèn chiếu sáng cho hợp lý, Trong khuôn khổ bài viết này LumièreLuxe sẽ giới thiệu …</div>
+    </div>
+    <div class="news-item">
+      <img src="https://denchauau.vn/images/Philips%20LED%201.jpg" height="150" width="150" alt="News Image 2" title="HƯỚNG DẪN CHỌN SỬ DỤNG ĐÈN LED TRANG TRÍ">
+      <p style="font-size: 14px;"><a href="#">HƯỚNG DẪN CHỌN SỬ DỤNG ĐÈN LED TRANG TRÍ</a></p>
+      <div class="product-price">LED là viết tắt của Light Emitting Diode, đây là ánh sáng được tạo ra bằng cách sử dụng một chất bán dẫn trong quá trình gọi là phát quangTrong những năm gần đây, đèn LED được coi là bước đột phá m…</div>
+  </div>
+  <div class="news-item">
+    <img src="https://denchauau.vn/images/den-dau-giuong.JPG" height="150" width="150" alt="News Image 2" title="5 CÁCH CHỌN ĐÈN TRANG TRÍ PHÒNG NGỦ CỰC CHUẨN">
+    <p style="font-size: 14px;"><a href="#">5 CÁCH CHỌN ĐÈN TRANG TRÍ PHÒNG NGỦ CỰC CHUẨN</a></p>
+    <div class="product-price">Ánh sáng phòng ngủ có ảnh hưởng rất lớn đến cảm xúc, tâm lý cũng như tình cảm của người sống trong đó. Chính vì vậy, trong thiết kế nội thất, việc lựa chọn đèn chiếu sáng phòng ngủ cũng rất quan tr…</div>
+</div>
+<div class="news-item">
+  <img src="https://noithatphalechauau.com.vn/data/upload/cach-chon-den-trang-tri-cho-biet-thu-sang-trong-h2.jpg" height="150" width="150" alt="News Image 2" title="ĐÈN DOWNLIGHT, ĐÈN LED MẮT TRÂU - NHỮNG ĐIỀU CẦN BIẾT">
+  <p style="font-size: 14px;"><a href="#">ĐÈN DOWNLIGHT, ĐÈN LED MẮT TRÂU - NHỮNG ĐIỀU CẦN BIẾT</a></p>
+  <div class="product-price">Đèn LED mắt trâu chính là loại đèn âm trần hay một số người còn gọi là đèn LED downlight, đèn LED mắt ếch. Đèn LED mắt trâu được gắn trực tiếp vào trần giả như thạch cao ho…</div>
+</div>
+        
+    
+        </aside>
+        
+     
+
+        <section>
+            <!--content-->
+            <div class="container mt-5">
+              <div class="headline">
+                  <h3 style="color:rgb(191, 152, 80); margin-top: 0px;">Không gian phòng ngủ</h3>
+              </div>
+              <div class= "row">
+                    
+                  <div class =" col-sm-4 images1">
+                    <img src="https://chuteu.com/wp-content/uploads/2021/12/Tim-hieu-ve-den-trang-tri-co-dien-2.jpg">
+                  </div>
+                  <div class ="col-sm-4  images2">
+                      <img src="https://thanhliemhome.vn/media/news/2904_den-chum.jpg">
+                    
+                  </div>
+        
+                  <!-- d-sm-none: display sm none -->
+                  <div class ="w-100 d-sm-none"></div>
+        
+                  <div class ="col-sm-4  images3">
+                      <img src="https://noithatdtm.com.vn/uploads/b%C3%A0i%20vi%E1%BA%BFt/M%E1%BA%ABu%20%C4%90%C3%A8n/%C4%91%C3%A8n%2034.jpg">
+                    
+                  </div>
+                  <div class ="col-sm-6  images4">
+                      <img src="https://den379.com/wp-content/uploads/2021/03/D218-8-1.jpg">
+                    
+                  </div>
+                  <div class ="col-sm-6 images5">
+                      <img src="https://denhiendai.vn/img/image/den-tha/den-tha/917/den-led-tha-tran-va-cac-dac-diem-ung-dung-cua-chung-1.jpg">
+                    
+                  </div>
+              </div>
+            </div>
+        
+            <!--sản phẩm bán chạy-->
+            <div class="container">
+              <div class="headline">
+                 <hr> 
+                 <a href=""><h3 style="color:rgb(191, 152, 80)">Sản phẩm bán chạy</h3></a><div class="container">
+                  <div class="row"> 
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="">           
+                         <img src="https://denchauau.vn/media/product/den-chum-quat-thien-ha-mc-kd1364.jpg" class="card-img-top" alt="bàn làm việc">
+                      </a>
+                      <div class="card-body">
+                        <a href="" style="text-decoration:none;"><h5 class="card-title" style="color:#050b09;"> Đèn Ốp Quạt Trần Ø1000mm MC-KD1364</h5></a>
+                      </div>
+                      <div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>4,950,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              5,500,000 VNĐ
+                            </del>
+                          </span>
+                        </p>
+                      </div>
+                    </div></div>
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="">
+                        <img src="https://denchauau.vn/media/product/den-op-tran-led-hien-dai-th-p063.jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href=""  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#000101;"> Đèn Ốp Trần LED Hiện Đại L1090mm YN-1601-5</h5>
+                        </a>
+                      </div><div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>3,100,500 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              4,625,000 VNĐ
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="">
+                        <img src="https://denchauau.vn/media/product/den-tha-ngoai-troi-al-t5026a.jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href=""  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#060f0c;"> Đèn Thả Ngoài Trời Chống Thấm AL-T5026A-18</h5>
+                        </a>
+                      </div>
+                      <div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>2,100,500 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              2,850,000 VNĐ
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="">
+                        <img src="https://denchauau.vn/media/product/den-tha-ngoai-troi-nhom-duc-x1103-29.jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href=""  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#040706;">Đèn Thả Ngoài Trời Nhôm Đúc W290mm AL-X1103-29</h5>
+                        </a>
+                      </div>
+                      <div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>9,675,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              10,100,000 VNĐ 
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+                   
+                  
+                    
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="">
+                        <img src="https://denchauau.vn/media/product/den-dong-chieu-tranh-vh-kd8820-48.jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href=""  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#020302;">Đèn Tranh Đồng LED L480mm VH-KD8820-48</h5>
+            
+                        </a>
+                      </div><div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>1,395,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              1,790,000 VNĐ  
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="">
+                        <img src="https://denchauau.vn/media/product/den-guong-trang-tri-than-dong-al-md1663.jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href=""  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#000000;">Đèn Gương Trang Trí Thân Đồng L440mm AL-MD1663-44</h5>
+                        </a>
+                      </div><div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>2,079,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              2,450,000 VNĐ 
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+            
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="">
+                        <img src="https://denchauau.vn/media/product/den-cay-trang-tri-al-ta246.jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href=""  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#000000;">Đèn Cây Trang Trí H1600mm AL-TA246</h5>
+                        </a>
+                      </div><div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>9,675,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              10,090,000 VNĐ 
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+            
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="">
+                        <img src="https://denchauau.vn/media/product/den-cay-trang-tri-al-f9905.jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href=""  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#000000;">Đèn Cây Trang Trí H1600mm AL-F9905</h5>
+                        </a>
+                      </div><div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>3,906,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              4,030,000 VNĐ 
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+            
+            
+                  </div>
+                 
+                 </div>
+              </div>
+        <!--Sản phẩm mới nhất-->    
+        
+            <div class="container">
+              <div class="headline">
+                <hr> 
+                <a href=""><h3 style="color:rgb(191, 152, 80)">Sản phẩm mới nhất</h3></a><div class="container">
+                  <div class="row"> 
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="https://moho.com.vn/products/giuong-ngu-go-tram-moho-vline-601-mau-nau-nhieu-kich-thuoc">           
+                        <img src="https://denchauau.vn/media/product/den-tha-trang-tri-al-mg3944a-29.jpg" class="card-img-top" alt="bàn làm việc">
+                      </a>
+                      <div class="card-body">
+                        <a href="https://moho.com.vn/products/giuong-ngu-go-tram-moho-vline-601-mau-nau-nhieu-kich-thuoc" style="text-decoration:none;"><h5 class="card-title" style="color:#050b09;"> Đèn Thả Trang Trí Kiểu Bắc Âu AL-MG3944A-29</h5></a>
+                      </div>
+                      <div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>1,350,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              1,500,000 VNĐ
+                            </del>
+                          </span>
+                        </p>
+                      </div>
+                    </div></div>
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="trang_chi_tiet1.html">
+                        <img src="https://denchauau.vn/media/product/den-tha-cac-hanh-tinh-he-mat-troi-al-pd8955_(1).jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href="trang_chi_tiet1.html"  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#000101;"> Đèn Thả Các Hành Tinh Hệ Mặt Trời Ø250mm AL-PD8955-20</h5>
+                        </a>
+                      </div><div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>1,562,500 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              1,625,000 VNĐ
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="trangchitiet2.html">
+                        <img src="https://denchauau.vn/media/product/den-tha-dong-al-c0260-28_(1).jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href="trangchitiet2.html"  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#060f0c;">Đèn Thả Đồng Ø280mm AL-C0260-28</h5>
+                        </a>
+                      </div>
+                      <div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span> 2,565,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              2,850,000 VNĐ
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="https://moho.com.vn/products/dong-ho-treo-tuong">
+                        <img src="https://denchauau.vn/media/product/den-tha-la-sen-al-rn129-30.jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href="https://moho.com.vn/products/dong-ho-treo-tuong"  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#040706;">Đèn Thả Hình Lá Sen Ø300mm AL-RN129-30</h5>
+                        </a>
+                      </div>
+                      <div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>1,890,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              2,100,000 VNĐ 
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+                  
+                  
+                    
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="https://moho.com.vn/products/ban-lam-viec-go-moho-fyn-601-mau-nau">
+                        <img src="https://denchauau.vn/media/product/den-tha-led-hien-dai-al-md8184.jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href="trangchitiet3.html"  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#020302;">Đèn Thả LED Hiện Đại L800mm AL-MD8184-80</h5>
+        
+                        </a>
+                      </div><div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>2,511,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              2,790,000 VNĐ  
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="https://moho.com.vn/products/ban-lam-viec-go-soi-moho-vline-601">
+                        <img src="https://denchauau.vn/media/product/den-tha-led-van-phong-ba-mc8300.jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href="https://moho.com.vn/products/ban-lam-viec-go-soi-moho-vline-601"  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#000000;">Đèn Thả LED Văn Phòng Ø3000mm BA-MC8300B</h5>
+                        </a>
+                      </div><div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>9,405,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              10,450,000 VNĐ 
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+        
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="https://moho.com.vn/products/ban-lam-viec-go-soi-moho-vline-601">
+                        <img src="https://denchauau.vn/media/product/den-cay-trang-tri-nghe-thuat-al-md7870s.jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href="https://moho.com.vn/products/ban-lam-viec-go-soi-moho-vline-601"  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#000000;">Đèn Cây Trang Trí H1600mm AL-MD7870S</h5>
+                        </a>
+                      </div><div class="box-pro-prices">
+                        <p class="pro-price highlight">
+                          
+                          <span>15,381,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              17,090,000 VNĐ 
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+        
+                    <div class="col-6 col-xl-3 mt-4"><div class="card">
+                      <a href="https://moho.com.vn/products/ban-lam-viec-go-soi-moho-vline-601">
+                        <img src="https://denchauau.vn/media/product/den-tha-trang-tri-kieu-bac-au-al-dt5201a.jpg" alt="tu" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href="https://moho.com.vn/products/ban-lam-viec-go-soi-moho-vline-601"  style="text-decoration:none;">
+                          <h5 class="card-title" style="color:#000000;">Đèn Thả Trang Trí Kiểu Bắc Âu Ø900mm AL-DT5021A-90</h5>
+                        </a>
+                      </div><div class="box-pro-prices ">
+                        <p class="pro-price highlight ">
+                          
+                          <span>3,627,000 VNĐ</span>
+                          
+                          <span class="pro-price-del">
+                            <del class="compare-price">
+                              4,030,000 VNĐ 
+                            </del>
+                          </span>
+                          
+                          
+                        </p>
+                      </div>
+                    </div></div>
+        
+        
+                  </div>
+                
+                </div>
+              </div>
+              
+        
+        
+              
+            <!--Banner dịch vụ-->
+            <br>
+            <br>
+            <br>
+            <div class="wrapper-home-banner-servce">
+              <div class="container">
+                <br>
+                <div class="flex_content services-pd site-animation">
+                  
+                  <div class="row">
+                  <div class="col-3">
+                    <div class="services">
+                      <div class="img-outer">
+                        <div class="service-img fade-box">
+                          <img width="50" height="50" src="https://theme.hstatic.net/200000065946/1001128819/14/vice_item_1_thumb.png?v=326" alt="Giao Hàng &amp; Lắp Đặt">
+                        </div>
+                      </div>
+                      <div class="text">
+                        <div class="title">Giao Hàng &amp; Lắp Đặt</div>
+                        <div class="desc">Miễn Phí</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="services">
+                      <div class="img-outer">
+                        <div class="service-img fade-box">
+                          <img width="50" height="50" src="https://theme.hstatic.net/200000065946/1001128819/14/vice_item_2_thumb.png?v=326" alt="Đổi Trả 1 - 1">
+                        </div>
+                      </div>
+                      <div class="text">
+                        <div class="title">Đổi Trả 1 - 1</div>
+                        <div class="desc">Miễn Phí</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="services">
+                      <div class="img-outer">
+                        <div class="service-img fade-box">
+                          <img width="50" height="50" src="https://theme.hstatic.net/200000065946/1001128819/14/vice_item_3_thumb.png?v=326" alt="Bảo Hành 2 Năm">
+                        </div>
+                      </div>
+                      <div class="text">
+                        <div class="title">Bảo Hành 2 Năm</div>
+                        <div class="desc">Miễn Phí</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="services">
+                      <div class="img-outer">
+                        <div class="service-img fade-box">
+                          <img width="50" height="50" src="https://theme.hstatic.net/200000065946/1001128819/14/vice_item_4_thumb.png?v=326" alt="Tư Vấn Thiết Kế">
+                        </div>
+                      </div>
+                      <div class="text">
+                        <div class="title">Tư Vấn Thiết Kế</div>
+                        <div class="desc">Miễn Phí</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  </div> 
+                  
+                </div>
+              </div>
+            </div>
+            </div>
+          </section>
+
+        <!--Đánh giá-->
+          <aside>
+            <h2 style="color:rgb(191, 152, 80); font-size: 25px;">Đánh giá khách hàng</h2>
+            <div class="review">
+              <img src="https://ss-images.saostar.vn/w800/pc/1634440766305/saostar-y937nvnpf0l6f2rl.jpg" height="150" width="150" alt="Avatar 1" class="avatar">
+                <p class="rating" style="color: rgb(255, 162, 0);">★★★★★</p>
+                <p class="customer-name">V (BTS)</p>
+                <p class="comment">Đèn rất đẹp và sang trọng, nhân viên vô cùng nhiệt tình. Tôi sẽ quay lại khi có nhu cầu.</p>
+            </div>
+        
+            <div class="review">
+              <img src="https://rollingstone.uol.com.br/media/_versions/emma_watson_no_tapete_vermelho_do_oscar__photo_by_jason_merrittgetty_image_widelg.jpg" height="150" width="150" alt="Avatar 1" class="avatar">
+                <p class="rating" style="color: rgb(255, 162, 0);">★★★★★</p>
+                <p class="customer-name">Emma Watson</p>
+                <p class="comment">Tôi đã mua đèn nhiều lần ở đây, thực sự rất ưng cả về giá cả lẫn chất lượng.</p>
+            </div>
+            <div class="review">
+              <img src="https://mega.com.vn/media/news/0106_hinh-nen-Ronaldo121.jpg" height="150" width="150" alt="Avatar 1" class="avatar">
+                <p class="rating" style="color: rgb(255, 162, 0);">★★★★★</p>
+                <p class="customer-name">Ronaldo</p>
+                <p class="comment">Tốt</p>
+            </div>
+            <div class="review">
+              <img src="https://thuthuatnhanh.com/wp-content/uploads/2021/11/Hinh-anh-chan-dung-dep.jpg" height="150" width="150" alt="Avatar 1" class="avatar">
+                <p class="rating" style="color: rgb(255, 162, 0);">★★★★★</p>
+                <p class="customer-name">Anna</p>
+                <p class="comment">Thực sự rất ưng cả về giá cả lẫn chất lượng.</p>
+            </div>
+            <div class="review">
+              <img src="https://haycafe.vn/wp-content/uploads/2022/02/Anh-gai-xinh-chau-Au-My-600x600.jpg" height="150" width="150" alt="Avatar 1" class="avatar">
+                <p class="rating" style="color: rgb(255, 162, 0);">★★★★★</p>
+                <p class="customer-name">Irene</p>
+                <p class="comment">Đèn rất sang trọng, nhân viên tư vấn nhiệt tình.</p>
+            </div>
+            <div class="review">
+              <img src="https://static2.yan.vn/YanNews/2167221/202009/fan-ca-khia-binz-ve-chan-dung-bang-hang-nghin-chu-chau-dc265a17.jpg" height="150" width="150" alt="Avatar 1" class="avatar">
+                <p class="rating" style="color: rgb(255, 162, 0);">★★★★★</p>
+                <p class="customer-name">BinZ</p>
+                <p class="comment">Amazing!! Chưa bao giờ thấy đèn nào đẹp và rẻ như của shop, chúc shop làm ăn phát đạt.</p>
+            </div>
+            <div class="review">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcPfq_uR5F7LktAhCwEiV4fgWcLriky9IKWw&usqp=CAU" height="150" width="150" alt="Avatar 1" class="avatar">
+                <p class="rating" style="color: rgb(255, 162, 0);">★★★★★</p>
+                <p class="customer-name">Pretty girl</p>
+                <p class="comment">Tôi đã mua đèn nhiều lần ở đây, thực sự rất ưng cả về giá cả lẫn chất lượng.</p>
+            </div>
+            <div class="review">
+              <img src="https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/w1024/Uploaded/ycgvppwi/2019_11_18/7.jpg" height="150" width="150" alt="Avatar 1" class="avatar">
+                <p class="rating" style="color: rgb(255, 162, 0);">★★★★★</p>
+                <p class="customer-name">What's my name?</p>
+                <p class="comment">Đèn đẹp lắm ạ!!</p>
+            </div>
+        
+            
+        </aside>
+        
+
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <div class="grid">
+           <div class="grid__row">
+               <div class="grid_column">
+                   <h5 class="footer_heading">LumièreLuxe-Luxury Light</h5>
+                   <p style="text-align: justify">LumièreLuxe: Định nghĩa lại sự rực rỡ với sự sang trọng vô song. Chiếu sáng không gian của bạn bằng đèn chùm vượt thời gian của chúng tôi, nơi sự sang trọng gặp ánh sáng. Trải nghiệm nghệ thuật rạng rỡ..</p>
+               </div>
+               <div class="grid_column">
+                   <h5 class="footer_heading">Dịch vụ</h5>
+                   <ul style="text-align: left; list-style: none; ">
+                       <li><a href="chinh_sach_ban_hang.html" style="text-decoration: none;color: white;">Chính sách bán hàng</a></li>
+                       <li><a href="Chinh_sach_giao_hang.html"style="text-decoration: none;color: white">Chính Sách Giao Hàng & Lắp Đặt</a></li>
+                       <li><a href="Chinh_sach_doi_tra.html"style="text-decoration: none;color: white">Chính Sách Đổi Trả</a></li>
+                       <li><a href="Chinh_sach_bao_hanh_bao_tri.html"style="text-decoration: none;color: white">Chính Sách Bảo Hành & Bảo Trì</a></li>
+                       <li><a href="Khach_hang_than_thiet.html"style="text-decoration: none;color: white">Khách Hàng Thân Thiết</a></li>
+                       
+                   </ul>
+               </div>
+               <div class="grid_column">
+                   <h5 class="footer_heading">Thông tin liên hệ</h5>
+                   <p style="text-align: left;">Địa chỉ: 12 Chùa Bộc, Đống Đa, Hà Nội</p>
+                   <p style="text-align: left;">SĐT: 090 7676 195</p>
+                   <p style="text-align: left;">Email: LumièreLuxe@gmail.com</p>
+               </div>
+               <div class="grid_column">
+                   <h5 class="footer_heading">Fanpage</h5>
+                   <a href="home.html" style="text-decoration: none; color: aliceblue;">
+                    <p>Website: www.LumièreLuxe.com</p>
+                  </a>
+               </div>
+           </div>
+           
+       </div>
+        
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ 
+     </div>
+     <div class="footer-menu-aboutus">
+      <ul class="menuList-footer">
+        
+        <li class="item">
+          <a target="_blank" href="https://maps.app.goo.gl/VnF9WTCDaNTmr1As5" title="Chỉ đường đến showroom trên Google Maps">Chỉ đường đến showroom trên Google Maps</a>
+        </li>
+          
+      </ul>
+    </div>
+       <div class="footer-bottom text-center">
+         <div class="container">
+           <p>Copyright © 2023 <a href="#"> LumièreLuxe - Luxury Light</a>.</p>
+         </div>
+       </div>
+   </footer>
+
+</body>
+</html>

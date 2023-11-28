@@ -1,49 +1,42 @@
-document.getElementById('searchForm').addEventListener('submit', function (event) {
-    // Prevent the default form submission
-    event.preventDefault();
-    // Get the search input value
-    var searchInput = document.getElementById('searchInput').value;
-    // Perform your search logic here (you can replace this with your actual search logic)
-    alert('Searching for: ' + searchInput);
-    // You can add more advanced search functionality or redirect to a search results page.
-});
+const products = [
+    { name: 'Đèn Ốp Quạt Trần Ø1000mm MC-KD1364' },
+    { name: 'Đèn Ốp Trần LED Hiện Đại L1090mm YN-1601-5' },
+    // Add more product data as needed
+];
 
-document.getElementById('searchInput').addEventListener('input', function () {
-    var searchInput = document.getElementById('searchInput').value;
-    if (searchInput.trim() !== '') {
-        // Call a function to fetch product suggestions based on the search input
-        fetchProductSuggestions(searchInput);
+const searchInput = document.getElementById('searchInput');
+const productDropdown = document.getElementById('productDropdown');
+
+searchInput.addEventListener('input', function () {
+    const inputValue = searchInput.value.toLowerCase();
+    const filteredProducts = products.filter(product => product.name.toLowerCase().includes(inputValue));
+
+    // Clear existing options in the dropdown
+    productDropdown.innerHTML = '';
+
+    if (filteredProducts.length > 0) {
+        // Populate the dropdown with matching products
+        filteredProducts.forEach(product => {
+            const option = document.createElement('option');
+            option.value = product.name;
+            productDropdown.appendChild(option);
+        });
+
+        // Display the dropdown
+        productDropdown.style.display = 'block';
     } else {
-        // Clear suggestions if the search input is empty
-        document.getElementById('suggestions').innerHTML = '';
+        // Hide the dropdown if no matching products
+        productDropdown.style.display = 'none';
     }
 });
 
-function fetchProductSuggestions(query) {
-    // Replace the URL with the actual URL of your server endpoint
-    var url = 'https://example.com/api/products?query=' + encodeURIComponent(query);
+document.getElementById('searchForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    // You can add additional handling here, such as navigating to a search results page
+});
 
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            // Display the suggestions
-            var suggestionsContainer = document.getElementById('suggestions');
-            suggestionsContainer.innerHTML = '';
-
-            data.products.forEach(function (product) {
-                var suggestionItem = document.createElement('div');
-                suggestionItem.textContent = product;
-                suggestionItem.classList.add('suggestion-item');
-
-                suggestionItem.addEventListener('click', function () {
-                    // Set the selected suggestion as the search input value
-                    document.getElementById('searchInput').value = product;
-                    // Clear the suggestions
-                    suggestionsContainer.innerHTML = '';
-                });
-
-                suggestionsContainer.appendChild(suggestionItem);
-            });
-        })
-        .catch(error => console.error('Error fetching suggestions:', error));
-}
+// Handle selection from the dropdown
+productDropdown.addEventListener('change', function () {
+    searchInput.value = productDropdown.value;
+    productDropdown.style.display = 'none';
+});

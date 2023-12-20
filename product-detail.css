@@ -1,0 +1,459 @@
+/*product*/
+body {
+  font-family: 'Arial', sans-serif;
+}
+h1{
+  margin-left: 100px;
+  margin-top: 10px;
+}
+.product-smaill-img img {
+    height: 92px;
+    margin: 10px 0;
+    cursor: pointer;/* khi dùng con trò và hình ảnh có thể nhấp nháy*/
+    display: block;
+    opacity: .6; /*Đặt độ mờ của hình ảnh là 0.6, tức là hình ảnh sẽ có độ trong suốt là 60%.*/
+    
+  }
+  
+  .product-smaill-img img:hover {
+    opacity: 1;
+  }
+  
+  .product-smaill-img {
+    float: left;
+    
+  }
+  .product {
+    top: 80%;
+    left: 10%; 
+    transform: translateY(-50%);
+    position: absolute; /*Đặt phần tử theo vị trí tuyệt đối, có nghĩa là nó sẽ được đặt dựa trên vị trí của phần tử cha, không bị ảnh hưởng bởi vị trí của các phần tử khác.*/
+    margin-right: 40%;
+    margin-top: 150px ;
+  }
+  
+  /* Styles for Large Product Image Container */
+  .img-container img {
+    height: 500px;
+  }
+  
+  .img-container {
+    float: left; /* Change to left to move the container to the left */
+    padding: 10px;
+   
+  }
+
+  .right {
+    padding: 50px 100px 50px 50px;
+    margin-left: 50%;
+    margin-top: 60px;
+  }
+  h3 {
+    color: #af827d;
+    margin: 20px 0 20px 0;
+    font-size: 25px;
+  }
+
+  h5,p,small {
+  color: #837D7C;
+}
+p {
+    margin: 20px 0 50px 0;
+    line-height: 25px;
+  }
+  
+  h5 {
+    font-size: 15px;
+  }
+  label,
+.add span,
+.color span {
+  width: 25px;
+  height: 25px;
+  background: #000;
+  border-radius: 50%;
+  margin: 20px 10px 20px 0;
+}
+.color span:nth-child(2) {
+    background: #EDEDED;
+  }
+  
+  .color span:nth-child(3) {
+    background: #D5D6D8;
+  }
+  
+  .color span:nth-child(4) {
+    background: #EFE0DE;
+  }
+  
+  .color span:nth-child(5) {
+    background: #AB8ED1;
+  }
+  
+  .color span:nth-child(6) {
+    background: #F04D44;
+  }
+
+  .add label,
+.add span {
+  background: none;
+  border: 1px solid #C1908B;
+  color: #C1908B;
+  text-align: center;
+  line-height: 25px;
+}
+
+.add label {
+  padding: 10px 30px 0 20px;
+  border-radius: 50px;
+  line-height: 0;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #C1908B;
+    color: white;
+}
+button:hover {
+    background: #000; /* Khi hover, background của nút sẽ thay đổi thành đen */
+  }
+.banner {
+    margin-top: 0;
+    margin-left: 0;
+    
+}
+
+
+/*thông số sản phẩm*/
+.product-details {
+  height: 80%;
+  width: 50%;
+  margin-left: 55%;
+/*   border: 1px solid teal; */
+  padding-left: 20px;
+}
+
+.product-details h2 {
+  margin: 0;
+  font-size: 35px;
+  
+}
+
+.product-details p:first-of-type {
+  margin: 0;
+}
+
+.product-details p:nth-of-type(2) {
+  border: 1px solid lightgrey;
+  width: 140px;
+  height: 25px;
+  padding-left: 5px;
+}
+
+.product-details p:nth-of-type(2) span {
+  font-size: 12px;
+  position: relative;
+  bottom: 1px;
+}
+
+.product-details p:nth-of-type(3) {
+  color: grey;
+  margin-bottom: 0;
+}
+
+.product-details p:nth-of-type(4) {
+  margin-top: 0;
+}
+
+.product-details p:nth-of-type(4) span:first-of-type {
+  font-weight: 800;
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.product-details p:nth-of-type(4) span:nth-of-type(2) {
+  text-decoration: line-through;
+}
+
+.product-details p:nth-of-type(4) span:nth-of-type(3) {
+  color: teal;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.product-details p:nth-of-type(5) {
+  color: grey;
+  font-size: 14px;
+}
+
+.product-details i.fas {
+  color: #FFC107;
+  margin-right: 5px;
+}
+
+.sample-colors {
+  display: flex;
+}
+.sample-colors div {
+  width: 30px;
+  height: 25px;
+/*   border: 1px solid grey; */
+}
+
+.sample-colors div:first-of-type {
+  margin-right: 15px;
+  background: maroon;
+}
+
+.sample-colors div:first-of-type div {
+  background: maroon;
+  width: 10px;
+  height: 10px;
+  transform: translate(22px, -5px);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.sample-colors div:not(:first-of-type) {
+  background: teal;
+  margin: 0 15px;
+}
+.sample-colors div:nth-child(3) {
+  background: blue;
+  margin: 0 15px;
+}
+.sample-colors div:nth-child(4) {
+  background: red;
+  margin: 0 15px;
+}
+.sample-colors div:nth-child(5) {
+  background: black;
+  margin: 0 15px;
+}
+button {
+  width: 170px;
+  height: 35px;
+  border: none;
+  margin-top: 14px;
+  font-family: 'Literata', serif;
+}
+
+button:first-of-type {
+  background: #f7bf4f;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button:nth-of-type(2) {
+  background: #f7bf4f;
+  border: 2px solid #4FC3F7;
+  border-radius: 4px;
+}
+button:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+.sample-colors div:hover {
+  transform: scale(1.1);
+}
+button:nth-of-type(2):hover {
+  background: #4FC3F7;
+  border: 2px solid #4FC3F7;
+  color: #fff;
+}
+
+  /*mô tả sản phẩm*/
+  body > div {
+    margin: 5% auto 0;
+    max-width: 720px;
+    
+  }
+  .tabs {
+    display: flex;
+    position: relative;
+    margin-top: 100px;
+    margin-left: 40px;
+  
+  }
+  .tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #fefbfb;
+    transition: all 0.2s ease;
+
+  }
+  .tab-item {
+    min-width: 80px;
+    padding: 16px 20px 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #262525;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 5px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .tab-icon {
+    font-size: 24px;
+    width: 32px;
+    position: relative;
+    top: 2px;
+  }
+  .tab-item:hover {
+    opacity: 1;
+    background-color: rgba(194, 53, 100, 0.05);
+    border-color: rgba(194, 53, 100, 0.1);
+  }
+  .tab-item.active {
+    opacity: 1;
+  }
+  .tab-content {
+    padding: 28px 0;
+    margin-top: -10px;
+    margin-left: 100px;
+  }
+  
+  .tab-pane {
+    color: #333;
+    display: none;
+  }
+  .tab-pane.active {
+    display: block;
+  }
+  .tab-pane h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .tab img{
+    float: left;
+    margin-left: 30px;
+  }
+  .sanpham img{
+    max-width: 400px;
+    height: 400px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  
+  li {
+    margin-bottom: 10px;
+    text-align: left; 
+  }
+  
+  #review-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+  }
+
+  /* sản phẩm tương tự */
+  .sanpham{
+    float: left;
+    display: flex;
+  flex-wrap: nowrap; /* Ngăn chặn việc wrap sang dòng mới */
+  margin-left: 120px;
+  }
+  
+ .card-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -30px; /* Để tạo khoảng cách giữa các thẻ .card */
+    margin-left: 10px;
+    float: left;
+  
+  }
+  
+  .card {
+    flex: 0 0 auto; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 10px; /* Khoảng cách giữa các thẻ .card */
+    text-align: center;
+    font-family: arial;
+    transition: transform 0.3s;
+    float: left;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    display: flex;
+  }
+  
+  .card button:hover {
+    background-color: #555;
+  }
+  
+  .card img {
+    width: 100%;
+    transition: opacity 0.3s;
+  }
+  
+  .card:hover img {
+    opacity: 0.8;
+  }
+  
+  .card a {
+    text-decoration: none;
+    color: #6a006a;
+  }
+  
+  /*đánh giá sản phẩm*/
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  input, select {
+    width: 100%;
+   
+  }
+
+  
